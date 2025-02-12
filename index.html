@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seoul Grill 199</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <img src="background1.png" alt="Seoul Grill 199" class="header-logo">
+        <h1 class="header-text">Welcome!</h1>
+    </div>
+
+    <div class="container">
+        <h2 class="menu-title">MENU & RULES</h2>
+
+        <div id="products-grid" class="products-grid">
+            <!-- Products will be dynamically inserted here -->
+        </div>
+
+        <div id="cart-container" class="cart-container" style="display: none;">
+            <h3>Shopping Cart</h3>
+            <table id="cart-table" class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-body">
+                    <!-- Cart items will be dynamically inserted here -->
+                </tbody>
+            </table>
+            <div class="cart-buttons">
+                <button id="update-cart-button" class="update-cart-button">Update Cart</button>
+                <button id="checkout-button" class="checkout-button">Proceed to PayPal Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div id="errorModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Error</h2>
+            <p id="errorMessage"></p>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="check.gif" alt="Success Checkmark" class="checkmark-gif">
+            <h2>Order Successful!</h2>
+            <p>Thank you for your purchase.</p>
+            <p id="successTotal"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
